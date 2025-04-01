@@ -79,10 +79,18 @@ body {
   --spacing: 0.25rem;
 }
 
+/* Width for nav and main */
+.width-nav-main {
+  width: min(90%, 1000px);
+  margin: 0 auto;
+}
+/* Header */
+.header {
+  border-bottom: 2px solid var(--accent);
+}
 /* Navigation */
 .nav {
-  --inline-spacing: calc(var(--spacing) * 20);
-  padding: calc(var(--inline-spacing) * 0.5) var(--inline-spacing);
+  padding-block: calc(var(--spacing) * 10);
   display: flex;
   flex-wrap: wrap;
   row-gap: calc(var(--spacing) * 3);
@@ -105,27 +113,24 @@ body {
   column-gap: calc(var(--spacing) * 12);
   border-bottom: 4px solid var(--accent);
 }
-.nav-list-item {
-  position: relative;
-}
+
 .nav-list-item button {
-  position: relative;
   background-color: transparent;
   border: none;
   color: var(--accent);
   cursor: pointer;
-  transition: transform 0.2s ease, text-decoration 0.2s ease;
+  transition: transform 0.2s ease, text-decoration 1s ease;
 }
 .nav-list-item button:hover {
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  transform: scale(1.1);
+  transform: scale(1.2);
   text-decoration-color: var(--accent);
 }
 
 @media screen and (max-width: 768px) {
   .nav {
-    --inline-spacing: calc(var(--spacing) * 5);
+    padding-block: 5%;
   }
   .nav-brand {
     font-size: var(--text-5xl);
