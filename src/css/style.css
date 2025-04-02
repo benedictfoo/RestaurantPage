@@ -90,7 +90,7 @@ body {
 }
 /* Navigation */
 .nav {
-  padding-block: calc(var(--spacing) * 10);
+  padding-block: calc(var(--spacing) * 5);
   display: flex;
   flex-wrap: wrap;
   row-gap: calc(var(--spacing) * 3);
@@ -100,8 +100,8 @@ body {
 
 .nav-brand {
   font-family: "paradose-regular", serif;
-  font-size: var(--text-7xl);
-  line-height: var(--text-7xl--line-height);
+  font-size: var(--text-4xl);
+  line-height: var(--text-4xl--line-height);
   margin-right: auto;
   color: var(--accent);
   text-decoration-thickness: 4px;
@@ -129,11 +129,8 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .nav {
-    padding-block: 5%;
-  }
   .nav-brand {
-    font-size: var(--text-5xl);
-    line-height: var(--text-5xl--line-height);
+    font-size: var(--text-3xl);
+    line-height: var(--text-3xl--line-height);
   }
 }
