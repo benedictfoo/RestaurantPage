@@ -60,5 +60,10 @@ const dogFoodList = [
     245,
   ],
 ];
+const catFoodList = [
+  ["GRILLED FISH WITH GRAVY", 210],
+  ["MINCED CHICKEN WITH CREAM AND SOUP", 230],
+];
 generateList(humanFoodList, "Food for humans");
 generateList(dogFoodList, "Puppy Menu");
+generateList(catFoodList, "Kitty Menu");

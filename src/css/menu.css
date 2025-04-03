@@ -1,3 +1,8 @@
+.menus {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .menu span {
   font-size: var(--text-base);
 }

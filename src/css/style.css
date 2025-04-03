@@ -43,6 +43,9 @@ img {
 body {
   --main-bg-color: #f8f4f6;
   --accent: rgb(85, 26, 139);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Typography */
@@ -136,6 +139,7 @@ h2 {
   text-decoration-color: var(--accent);
 }
 .main {
+  flex-grow: 1;
   background-color: rgb(228, 228, 153);
 }
 #content {
