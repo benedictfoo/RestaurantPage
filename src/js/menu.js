@@ -24,9 +24,17 @@ function generateList(arrayOfFoodsAndPrices, menuHeading) {
     const listItemElement = document.createElement("li");
     const listItemNameElement = document.createElement("span");
     const listItemPriceElement = document.createElement("span");
-    listItemNameElement.textContent = item[0];
-    listItemPriceElement.textContent = item[1];
     listItemElement.appendChild(listItemNameElement);
+    listItemNameElement.textContent = item[0];
+    if (item.length > 2) {
+      listItemElement.classList.add("item-with-description");
+      const listItemDescription = document.createElement("span");
+      listItemDescription.textContent = item[1];
+      listItemPriceElement.textContent = item[2];
+      listItemElement.appendChild(listItemDescription);
+    } else {
+      listItemPriceElement.textContent = item[1];
+    }
     listItemElement.appendChild(listItemPriceElement);
     menuElement.appendChild(listItemElement);
   });
@@ -43,4 +51,14 @@ const humanFoodList = [
   ["CHICKEN CLASSIC BRUSCHETTA", 255],
   ["VEG CLASSIC PIZZA", 255],
 ];
+const dogFoodList = [
+  ["IT'S A PUPFLUENCER THING", "(Grilled chicken breast with sticks)", 225],
+  ["WOOF WOOF CHICKEN MEAL", "(Grilled chicken patty with brown rice)", 225],
+  [
+    "WOOF AT FIRST SIGHT",
+    "(grilled chicken shredded breast with brown rice ond gravy)",
+    245,
+  ],
+];
 generateList(humanFoodList, "Food for humans");
+generateList(dogFoodList, "Puppy Menu");
