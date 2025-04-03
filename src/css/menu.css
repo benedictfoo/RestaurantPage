@@ -1,0 +1,22 @@
+.menu span {
+  font-size: var(--text-base);
+}
+.menu ul {
+  display: grid;
+}
+.menu {
+  width: max-content;
+  padding: 1rem;
+  border: 1px black;
+  border-style: dashed;
+  margin-top: 1rem;
+}
+.menu li {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+h2 {
+  text-decoration: underline;
+}

@@ -74,6 +74,14 @@ body {
   --text-9xl: 8rem;
   --text-9xl--line-height: 1;
 }
+h1 {
+  font-size: var(--text-2xl);
+  line-height: var(--text-2xl--line-height);
+}
+h2 {
+  font-size: var(--text-lg);
+  line-height: var(--text-lg--line-height);
+}
 /* Spacing */
 :root {
   --spacing: 0.25rem;
