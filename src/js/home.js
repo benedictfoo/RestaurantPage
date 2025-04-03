@@ -1,6 +1,7 @@
 import HomeBackground from "../img/home-background.jpg";
 import "../css/home.css";
 const contentElement = document.querySelector("#content");
+contentElement.innerHTML = "";
 const imgElement = document.createElement("img");
 imgElement.classList.add("home-img");
 imgElement.src = HomeBackground;

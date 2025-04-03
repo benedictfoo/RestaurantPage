@@ -127,9 +127,11 @@ body {
   transform: scale(1.2);
   text-decoration-color: var(--accent);
 }
-#content {
+.main {
   background-color: rgb(228, 228, 153);
-  padding: 2rem;
+}
+#content {
+  padding-block: calc(var(--spacing) * 4);
 }
 @media screen and (max-width: 768px) {
   .nav-brand {
