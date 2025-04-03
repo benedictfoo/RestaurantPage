@@ -6,19 +6,20 @@ menusElement.classList.add("menus");
 const menusHeadingElement = document.createElement("h1");
 menusHeadingElement.textContent = "Our food";
 contentElement.appendChild(menusHeadingElement);
-// For Humans
-const humanMenuElement = document.createElement("div");
-menusElement.appendChild(humanMenuElement);
-const humanMenuHeadingElement = document.createElement("h2");
-humanMenuHeadingElement.textContent = "Food for humans";
-humanMenuElement.appendChild(humanMenuHeadingElement);
 contentElement.appendChild(menusElement);
-// Humans list
-const humanMenuList = document.createElement("ul");
-humanMenuList.setAttribute("role", "list");
-humanMenuElement.appendChild(humanMenuList);
-humanMenuElement.classList.add("menu");
-function generateList(arrayOfFoodsAndPrices, listElement) {
+
+function generateList(arrayOfFoodsAndPrices, menuHeading) {
+  // For Someone
+  const menuElement = document.createElement("div");
+  menusElement.appendChild(menuElement);
+  const menuHeadingElement = document.createElement("h2");
+  menuHeadingElement.textContent = menuHeading;
+  menuElement.appendChild(menuHeadingElement);
+  // Someones' list
+  const menuList = document.createElement("ul");
+  menuList.setAttribute("role", "list");
+  menuElement.appendChild(menuList);
+  menuElement.classList.add("menu");
   arrayOfFoodsAndPrices.forEach((item) => {
     const listItemElement = document.createElement("li");
     const listItemNameElement = document.createElement("span");
@@ -27,7 +28,7 @@ function generateList(arrayOfFoodsAndPrices, listElement) {
     listItemPriceElement.textContent = item[1];
     listItemElement.appendChild(listItemNameElement);
     listItemElement.appendChild(listItemPriceElement);
-    listElement.appendChild(listItemElement);
+    menuElement.appendChild(listItemElement);
   });
 }
 const humanFoodList = [
@@ -42,4 +43,4 @@ const humanFoodList = [
   ["CHICKEN CLASSIC BRUSCHETTA", 255],
   ["VEG CLASSIC PIZZA", 255],
 ];
-generateList(humanFoodList, humanMenuList);
+generateList(humanFoodList, "Food for humans");
