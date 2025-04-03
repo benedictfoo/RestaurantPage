@@ -1,4 +1,6 @@
 import "../css/style.css";
 import "./home";
-import "./menu";
-import "./about";
+
+document.querySelector(".nav-list").addEventListener("click", (e) => {
+  console.log(e.target);
+});

@@ -126,6 +126,7 @@ h2 {
 }
 
 .nav-list-item button {
+  padding: 0;
   background-color: transparent;
   border: none;
   color: var(--accent);
